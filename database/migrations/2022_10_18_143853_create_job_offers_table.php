@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('email');
-            $table->integer('category');
+            $table->integer('category')->nullable();
             $table->longText('description');
             $table->timestamps();
         });
