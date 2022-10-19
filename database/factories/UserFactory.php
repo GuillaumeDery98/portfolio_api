@@ -22,7 +22,7 @@ class UserFactory extends Factory
             'name' => "Guillaume Dery",
             'email' => "dery.guillaume98@outlook.fr",
             'email_verified_at' => now(),
-            'password' => Hash::make(env('password')), // password
+            'password' => Hash::make(env('PASSWORD')), // password
             'remember_token' => null,
             'address' => "360 Chaussée Saint-Pierre 1040 Etterbeek",
             'phone' => "+32486162239",
