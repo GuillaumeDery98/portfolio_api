@@ -20,7 +20,7 @@ class UserFactory extends Factory
     {
         return [
             'name' => "Guillaume Dery",
-            'email' => "dery.guillaume98@outlook.fr",
+            'email' => env('EMAIL'),
             'email_verified_at' => now(),
             'password' => Hash::make(env('PASSWORD')), // password
             'remember_token' => null,

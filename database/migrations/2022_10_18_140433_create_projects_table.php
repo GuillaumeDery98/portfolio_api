@@ -21,6 +21,7 @@ return new class extends Migration
             $table->text('objective');
             $table->longText('challenge');
             $table->string('tools');
+            $table->json('pictures')->nullable();
             $table->timestamps();
         });
     }

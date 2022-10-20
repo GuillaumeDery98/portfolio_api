@@ -17,7 +17,8 @@ class Project extends Model
         'client',
         'objective',
         'challenge',
-        'tools'
+        'tools',
+        'pictures'
     ];
 
     protected $casts = [
@@ -26,7 +27,8 @@ class Project extends Model
         'client' => 'string',
         'objective' => 'string',
         'challenge' => 'string',
-        'tools' => 'string'
+        'tools' => 'string',
+        'pictures' => 'string',
     ];
 
     public static $rules = [
@@ -36,6 +38,7 @@ class Project extends Model
         'objective' => 'required|string',
         'challenge' => 'required|string',
         'tools' => 'required|string',
+        'pictures' => 'nullable',
         'created_at' => 'nullable',
         'updated_at' => 'nullable'
     ];
