@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\LinkController;
 use App\Http\Controllers\ProfileController;
 
 /*
@@ -28,6 +29,11 @@ Route::middleware(['auth', 'verified'])->group(function () {
 
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile');
     Route::put('/profile', [ProfileController::class, 'update'])->name('profile.update');
+    Route::put('/profile/links', [ProfileController::class, 'files'])->name('profile.files');
+
+    Route::put('/links', [LinkController::class, 'update'])->name('links.update');
+    Route::post('/links', [LinkController::class, 'store'])->name('links.store');
+    Route::delete('/links', [LinkController::class, 'delete'])->name('links.delete');
 });
 
 require __DIR__ . '/auth.php';
